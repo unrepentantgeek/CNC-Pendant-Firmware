@@ -265,9 +265,12 @@ void loop()
           output.write('-');
           distance = -distance;
         }
-        output.print(distance/10);
+        output.print(distance / 100);
         output.write('.');
-        output.print(distance % 10);
+        output.print(distance % 100 / 10);
+        output.print(distance % 100 % 10);
+        output.write('|');
+        output.print(distance);
         output.write('\n');
       }
     }
